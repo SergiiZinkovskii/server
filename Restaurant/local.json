@@ -1,0 +1,14 @@
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning",
+      "Microsoft.Hosting.Lifetime": "Information"
+    }
+  },
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=(localdb)\\MSSQLLocalDB;Database=Restaurant;Trusted_Connection=True;MultipleActiveResultSets=true"
+  },
+  "AllowedHosts": "*"
+}
+//662e044cfd978a223f9e892fa179f35e
