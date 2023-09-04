@@ -1,4 +1,4 @@
-using FluentAssertions.Common;
+﻿using FluentAssertions.Common;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.EntityFrameworkCore;
 using Restaurant.DAL;
@@ -25,9 +25,10 @@ builder.Services.AddAuthentication(config => {
                    config.ClientSecret = "client_secret_mvc";
                    config.SaveTokens = true;
                    config.ResponseType = "code";
-                   config.SignedOutCallbackPath = "/Home/Index";
-
+                   config.SignedOutCallbackPath = "/signout-callback-oidc"; // Вказати URL для обробки редиректу після виходу
+                   config.CallbackPath = "/signin-oidc"; // Вказати URL для обробки редиректу після авторизації
                    config.GetClaimsFromUserInfoEndpoint = true;
+                   
 
                    // configure scope
                    config.Scope.Clear();

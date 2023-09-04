@@ -79,6 +79,11 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(
+    name: "oidc-callback",
+    pattern: "signin-oidc", 
+    defaults: new { controller = "Account", action = "SignInCallback" });
+
+app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 

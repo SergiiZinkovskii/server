@@ -31,9 +31,11 @@ namespace Authorization.IdentityServer
                     {
                         "DeliveryAPI",
                         IdentityServerConstants.StandardScopes.OpenId,
-                        IdentityServerConstants.StandardScopes.Profile
+                        IdentityServerConstants.StandardScopes.Profile,
+
                     },
                     RedirectUris = { "https://localhost:7279/signin-oidc" },
+                    
                     RequirePkce = true
                 }
             };
